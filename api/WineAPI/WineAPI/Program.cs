@@ -8,7 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var connectionString = builder.Configuration.GetConnectionString("postgre");
+var connectionString = builder.Configuration.GetConnectionString("postgres");
 builder.Services.AddDbContext<WineContext>(options => options.UseNpgsql(connectionString));
 
 var app = builder.Build();
