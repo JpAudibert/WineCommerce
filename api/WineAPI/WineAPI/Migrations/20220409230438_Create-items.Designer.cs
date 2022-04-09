@@ -12,7 +12,7 @@ using WineAPI.Environment.EFCore;
 namespace WineAPI.Migrations
 {
     [DbContext(typeof(WineContext))]
-    [Migration("20220405014922_Create-items")]
+    [Migration("20220409230438_Create-items")]
     partial class Createitems
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -28,31 +28,36 @@ namespace WineAPI.Migrations
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("integer");
+                        .HasColumnType("integer")
+                        .HasColumnName("id");
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<DateTime>("CreatedAt")
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("varchar(100)")
+                        .HasColumnName("description");
+
+                    b.Property<byte[]>("Image")
+                        .IsRequired()
+                        .HasColumnType("bytea")
+                        .HasColumnName("image");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("varchar(60)")
+                        .HasColumnName("name");
+
+                    b.Property<decimal>("Price")
+                        .HasColumnType("numeric(12,2)")
+                        .HasColumnName("price");
+
+                    b.Property<DateTime>("createdAt")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("timestamp with time zone")
                         .HasDefaultValueSql("now()");
 
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("varchar(100)");
-
-                    b.Property<byte[]>("Image")
-                        .IsRequired()
-                        .HasColumnType("bytea");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("varchar(60)");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("numeric(12,2)");
-
-                    b.Property<DateTime>("UpdatedAt")
+                    b.Property<DateTime>("updatedAt")
                         .ValueGeneratedOnAddOrUpdate()
                         .HasColumnType("timestamp with time zone")
                         .HasDefaultValueSql("now()");

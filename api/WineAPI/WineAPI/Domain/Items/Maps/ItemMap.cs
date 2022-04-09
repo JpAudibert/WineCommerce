@@ -10,13 +10,13 @@ public class ItemMap : IEntityTypeConfiguration<Item>
         builder.ToTable("items");
         builder.HasKey(prop => prop.Id);
 
-        builder.Property(prop => prop.Name).HasColumnType("varchar(60)");
-        builder.Property(prop => prop.Description).HasColumnType("varchar(100)");
-        builder.Property(prop => prop.Description).HasColumnType("varchar(100)");
-        builder.Property(prop => prop.Price).HasColumnType("decimal(12,2)");
-        builder.Property(prop => prop.Image).HasColumnType("bytea");
+        builder.Property(prop => prop.Id).HasColumnName("id");
+        builder.Property(prop => prop.Name).HasColumnName("name").HasColumnType("varchar(60)");
+        builder.Property(prop => prop.Description).HasColumnName("description").HasColumnType("varchar(100)");
+        builder.Property(prop => prop.Price).HasColumnName("price").HasColumnType("decimal(12,2)");
+        builder.Property(prop => prop.Image).HasColumnName("image").HasColumnType("bytea");
 
-        builder.Property<DateTime>("CreatedAt").ValueGeneratedOnAdd().HasDefaultValueSql("now()");
-        builder.Property<DateTime>("UpdatedAt").ValueGeneratedOnAddOrUpdate().HasDefaultValueSql("now()");
+        builder.Property<DateTime>("created_at").ValueGeneratedOnAdd().HasDefaultValueSql("now()");
+        builder.Property<DateTime>("updated_at").ValueGeneratedOnAddOrUpdate().HasDefaultValueSql("now()");
     }
 }
