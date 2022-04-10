@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using System.Buffers.Text;
+using WineAPI.Domain.Items.Infrastructure;
 using WineAPI.Environment.EFCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +12,10 @@ builder.Services.AddSwaggerGen();
 
 var connectionString = builder.Configuration.GetConnectionString("postgres");
 builder.Services.AddDbContext<WineContext>(options => options.UseNpgsql(connectionString));
+
+builder.Services.AddScoped<ItemsQueries>();
+
+builder.Services.AddCors();
 
 var app = builder.Build();
 
@@ -24,11 +30,16 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 app.UseCors();
 
-app.MapGet("/products", async (WineContext wineContext) => Results.Json(await wineContext.Items.ToListAsync()));
-
-app.MapPost("/order", async (WineContext wineContext) =>
+app.MapGet("/products", async (ItemsQueries itemsQueries) => 
 {
-
+    return Results.Ok(await itemsQueries.GetAllItems());
 });
+
+app.MapGet("/products/{id}", async (ItemsQueries itemsQueries, int id) =>
+{
+    return Results.Ok(await itemsQueries.GetItem(id));
+});
+
+app.UseCors();
 
 app.Run();

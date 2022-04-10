@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using WineAPI.Environment.EFCore;
@@ -11,9 +12,10 @@ using WineAPI.Environment.EFCore;
 namespace WineAPI.Migrations
 {
     [DbContext(typeof(WineContext))]
-    partial class WineContextModelSnapshot : ModelSnapshot
+    [Migration("20220410002107_Byte-to-text")]
+    partial class Bytetotext
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

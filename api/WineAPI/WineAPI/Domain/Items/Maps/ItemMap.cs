@@ -14,7 +14,7 @@ public class ItemMap : IEntityTypeConfiguration<Item>
         builder.Property(prop => prop.Name).HasColumnName("name").HasColumnType("varchar(60)");
         builder.Property(prop => prop.Description).HasColumnName("description").HasColumnType("varchar(100)");
         builder.Property(prop => prop.Price).HasColumnName("price").HasColumnType("decimal(12,2)");
-        builder.Property(prop => prop.Image).HasColumnName("image").HasColumnType("bytea");
+        builder.Property(prop => prop.Image).HasColumnName("image").HasColumnType("text");
 
         builder.Property<DateTime>("created_at").ValueGeneratedOnAdd().HasDefaultValueSql("now()");
         builder.Property<DateTime>("updated_at").ValueGeneratedOnAddOrUpdate().HasDefaultValueSql("now()");
