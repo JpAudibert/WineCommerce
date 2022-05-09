@@ -4,13 +4,13 @@ import {
   BrowserRouter
 } from "react-router-dom";
 
-import ProductList from "./pages/ProductList";
+import Home from "./pages/Home";
 
 const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<ProductList />} />
+        <Route path="/" element={<Home />} />
       </Routes>
     </BrowserRouter>
   )
