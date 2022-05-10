@@ -4,31 +4,6 @@ interface IDescriptionItemProps {
   isImageLeft: boolean
 }
 
-export const NavigationBar = styled.nav`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #eebbee;
-  position: fixed;
-
-  width: 100%;
-  height: 80px;
-
-  padding: 0 128px;
-
-  a {
-    color: #1B1725;
-    font-size: 18px;
-  }
-
-  & > div {
-    width: 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-`;
-
 export const BackgroundImage = styled.div`
   display: flex;
   width: 100%;
@@ -41,37 +16,18 @@ export const BackgroundImage = styled.div`
 `;
 
 export const Container = styled.main`
-  padding: 96px 128px;
+  padding: 96px 128px 48px;
   width: 100%;
 `
 
 export const Products = styled.section`
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-
-`;
-
-export const Product = styled.article`
-  margin-top: 32px;
-  width: 100%;
-  max-width: 256px;
-
-  a {
-    color: inherit;
-  }
-
-  img {
-    height: 256px;
-  }
-
-  h3 {
-    margin: 8px 0 8px 0;
-  }
+  display: grid;
+  gap: 50px;
+  grid-template-columns: repeat(4, 1fr);
 `;
 
 export const Descriptions = styled.section`
-  margin: 48px 0;
+  margin: 64px 0;
 `;
 
 export const DescriptionItem = styled.article<IDescriptionItemProps>`
@@ -81,7 +37,6 @@ export const DescriptionItem = styled.article<IDescriptionItemProps>`
 
   & + article {
     margin-top: 32px;
-
   }
 
   h2 {

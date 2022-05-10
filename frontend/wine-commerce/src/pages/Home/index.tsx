@@ -1,5 +1,7 @@
-import { Link } from "react-router-dom"
-import { NavigationBar, BackgroundImage, Products, Product, Container, Descriptions, DescriptionItem } from "./styles"
+import NavigationBar from "../../components/NavigationBar"
+import Footer from "../../components/Footer"
+import Product from "../../components/Product"
+import { BackgroundImage, Products, Container, Descriptions, DescriptionItem } from "./styles"
 import banner from "../../assets/banner.jpg"
 import example from "../../assets/example.jpg"
 import history from "../../assets/history.jpg"
@@ -7,49 +9,41 @@ import history from "../../assets/history.jpg"
 const Home: React.FC = () => {
   return (
     <>
-      <NavigationBar>
-        <div>
-          <Link to="/">Wine Commerce</Link>
-        </div>
-        <div>
-          <Link to="/products">Produtos</Link>
-          <Link to="/login">Login</Link>
-        </div>
-      </NavigationBar>
+      <NavigationBar />
       <BackgroundImage>
         <img src={banner} alt="banner" />
       </BackgroundImage>
       <Container>
         <h2>Produtos em Destaque</h2>
         <Products>
-          <Product>
-            <Link to="">
-              <img src={example} alt="Example" />
-              <h3>Produto 1</h3>
-              <p>Lorem ipsum dolor we gonna chung amizzle, its fo rizzle adipiscing elit. Nullam sapien velizzle, fo shizzle mah nizzle fo rizzle, mah home g-dizzle things, suscipit things, gravida vizzle, shizznit. Pellentesque phat shiznit. Nizzle erizzle.</p>
-            </Link>
-          </Product>
-          <Product>
-            <Link to="">
-              <img src={example} alt="Example" />
-              <h3>Produto 1</h3>
-              <p>Lorem ipsum dolor we gonna chung amizzle, its fo rizzle adipiscing elit. Nullam sapien velizzle, fo shizzle mah nizzle fo rizzle, mah home g-dizzle things, suscipit things, gravida vizzle, shizznit. Pellentesque phat shiznit. Nizzle erizzle.</p>
-            </Link>
-          </Product>
-          <Product>
-            <Link to="">
-              <img src={example} alt="Example" />
-              <h3>Produto 1</h3>
-              <p>Lorem ipsum dolor we gonna chung amizzle, its fo rizzle adipiscing elit. Nullam sapien velizzle, fo shizzle mah nizzle fo rizzle, mah home g-dizzle things, suscipit things, gravida vizzle, shizznit. Pellentesque phat shiznit. Nizzle erizzle.</p>
-            </Link>
-          </Product>
-          <Product>
-            <Link to="">
-              <img src={example} alt="Example" />
-              <h3>Produto 1</h3>
-              <p>Lorem ipsum dolor we gonna chung amizzle, its fo rizzle adipiscing elit. Nullam sapien velizzle, fo shizzle mah nizzle fo rizzle, mah home g-dizzle things, suscipit things, gravida vizzle, shizznit. Pellentesque phat shiznit. Nizzle erizzle.</p>
-            </Link>
-          </Product>
+          <Product
+            id={1}
+            image={example}
+            title={"Produto 1"}
+            price={13.99}
+            description={"I saw beyonces tizzles and my pizzle went crizzle ipsizzle dolor fo shizzle my nizzle amizzle, nizzle bling bling elit. Go to hizzle sapizzle velizzle, pimpin' fo shizzle, dawg ass, i'm in the shizzle shiznit, you son of a bizzle."}
+          />
+          <Product
+            id={1}
+            image={example}
+            title={"Produto 2"}
+            price={13.99}
+            description={"I saw beyonces tizzles and my pizzle went crizzle ipsizzle dolor fo shizzle my nizzle amizzle, nizzle bling bling elit. Go to hizzle sapizzle velizzle, pimpin' fo shizzle, dawg ass, i'm in the shizzle shiznit, you son of a bizzle."}
+          />
+          <Product
+            id={1}
+            image={example}
+            title={"Produto 3"}
+            price={13.99}
+            description={"I saw beyonces tizzles and my pizzle went crizzle ipsizzle dolor fo shizzle my nizzle amizzle, nizzle bling bling elit. Go to hizzle sapizzle velizzle, pimpin' fo shizzle, dawg ass, i'm in the shizzle shiznit, you son of a bizzle."}
+          />
+          <Product
+            id={1}
+            image={example}
+            title={"Produto 4"}
+            price={13.99}
+            description={"I saw beyonces tizzles and my pizzle went crizzle ipsizzle dolor fo shizzle my nizzle amizzle, nizzle bling bling elit. Go to hizzle sapizzle velizzle, pimpin' fo shizzle, dawg ass, i'm in the shizzle shiznit, you son of a bizzle."}
+          />
         </Products>
         <Descriptions>
           <DescriptionItem isImageLeft={true}>
@@ -69,9 +63,7 @@ const Home: React.FC = () => {
           </DescriptionItem>
         </Descriptions>
       </Container>
-      {/* <Footer>
-
-      </Footer> */}
+      <Footer />
     </>
   );
 }
