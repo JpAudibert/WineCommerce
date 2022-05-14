@@ -8,6 +8,8 @@ export const Container = styled.article`
   padding: 16px 0;
   width: 100%;
   border-radius: 5px;
+  border: solid #eef 1px;
+  box-shadow: 0 0 1em rgba(0,0,0, 0.08);
 
   a {
     color: inherit;
@@ -32,7 +34,7 @@ export const Container = styled.article`
 
   &:hover {
     box-shadow: 0 0 1em rgba(0,0,0, 0.3);
-    transition: box-shadow 0.3s;
+    transition: box-shadow 0.5s;
   }
 `;
 
