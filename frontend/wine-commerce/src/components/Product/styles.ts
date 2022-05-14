@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { lighten } from 'polished';
 
-export const Container = styled.article`
+export const Content = styled.article`
   display: flex;
   justify-content: center;
   margin-top: 32px;

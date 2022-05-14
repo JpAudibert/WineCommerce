@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { Container } from "./styles";
+import { Content } from "./styles";
 
 const Footer: React.FC = () => (
-  <Container>
+  <Content>
     <div>
       <strong>Wine Commerce</strong>
     </div>
@@ -11,7 +11,7 @@ const Footer: React.FC = () => (
       <Link to="/products">Produtos</Link>
       <Link to="/login">Login</Link>
     </div>
-  </Container>
+  </Content>
 )
 
 export default Footer;

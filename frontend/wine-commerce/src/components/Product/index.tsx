@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Container, Actions } from "./styles";
+import { Actions, Content } from "./styles";
 
 interface IProductProps {
   id: number
@@ -10,7 +10,7 @@ interface IProductProps {
 }
 
 const Product: React.FC<IProductProps> = ({ id, image, title, price, description }: IProductProps) => (
-  <Container>
+  <Content>
     <div>
       <Link to={`/products/${id}`}>
         <img src={image} alt={title} />
@@ -31,7 +31,7 @@ const Product: React.FC<IProductProps> = ({ id, image, title, price, description
         </Link>
       </Actions>
     </div>
-  </Container >
+  </Content >
 )
 
 export default Product

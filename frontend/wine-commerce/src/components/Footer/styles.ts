@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.footer`
+export const Content = styled.footer`
   display: flex;
   justify-content: center;
   width: 100%;

@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import { Container } from "./styles";
+import { Content } from "./styles";
 
 const NavigationBar: React.FC = () => (
-  <Container>
+  <Content>
     <div>
       <Link to="/">Wine Commerce</Link>
     </div>
@@ -10,7 +10,7 @@ const NavigationBar: React.FC = () => (
       <Link to="/products">Produtos</Link>
       <Link to="/login">Login</Link>
     </div>
-  </Container>
+  </Content>
 )
 
 export default NavigationBar;

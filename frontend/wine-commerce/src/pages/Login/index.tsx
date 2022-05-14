@@ -1,11 +1,11 @@
-import Footer from "../../components/Footer";
-import NavigationBar from "../../components/NavigationBar";
-// import { Container } from "./styles";
+import Container from "../../components/Container";
 
 const PorductsList: React.FC = () => {
   return (
     <>
-      <h1>monke</h1>
+      <Container>
+        <h1>monke</h1>
+      </Container>
     </>
   )
 }

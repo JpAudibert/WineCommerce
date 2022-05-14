@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
+import example from "../../assets/example.jpg";
+import Container from "../../components/Container";
 import Footer from "../../components/Footer";
 import NavigationBar from "../../components/NavigationBar";
-import { Container, Products } from "./styles";
-import example from "../../assets/example.jpg"
 import Product from "../../components/Product";
+import { Products } from "./styles";
 
 const PorductsList: React.FC = () => {
   return (

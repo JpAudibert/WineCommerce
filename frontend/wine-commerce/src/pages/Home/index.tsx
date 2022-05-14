@@ -1,10 +1,11 @@
-import NavigationBar from "../../components/NavigationBar"
-import Footer from "../../components/Footer"
-import Product from "../../components/Product"
-import { BackgroundImage, Products, Container, Descriptions, DescriptionItem } from "./styles"
 import banner from "../../assets/banner.jpg"
 import example from "../../assets/example.jpg"
 import history from "../../assets/history.jpg"
+import Container from "../../components/Container"
+import Footer from "../../components/Footer"
+import NavigationBar from "../../components/NavigationBar"
+import Product from "../../components/Product"
+import { BackgroundImage, DescriptionItem, Descriptions, Products } from "./styles"
 
 const Home: React.FC = () => {
   return (
