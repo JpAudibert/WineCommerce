@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Button from "../Button";
 import { Actions, Content } from "./styles";
 
 interface IProductProps {
@@ -20,14 +21,14 @@ const Product: React.FC<IProductProps> = ({ id, image, title, price, description
       </Link>
       <Actions>
         <Link to={""}>
-          <button type="button">
+          <Button>
             Adicionar ao carrinho
-          </button>
+          </Button>
         </Link>
         <Link to={`/products/${id}`}>
-          <button type="button">
+          <Button main>
             Comprar
-          </button>
+          </Button>
         </Link>
       </Actions>
     </div>

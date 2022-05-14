@@ -42,25 +42,4 @@ export const Actions = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-
-  button {
-    width: 100%;
-    height: 32px;
-    border-radius: 5px;
-    border: 0;
-    margin-top: 8px;
-    background: #342a45;
-    color: #fff
-  }
-
-  button:hover {
-    height: 32px;
-    border-radius: 5px;
-    border: 0;
-    margin-top: 8px;
-    background: ${lighten(0.2, '#342a45')};
-    color: #fff;
-
-    transition: background-color 0.2s;
-  }
 `;
