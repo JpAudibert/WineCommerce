@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WineCommerce", "WineCommerce\WineCommerce.csproj", "{69E1B092-54CF-4447-9922-308E0A83B66D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WineCommerce.HttpApi", "WineCommerce.HttpApi\WineCommerce.HttpApi.csproj", "{A4AE58EC-9333-40EE-BE35-4795DC4B64DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{69E1B092-54CF-4447-9922-308E0A83B66D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69E1B092-54CF-4447-9922-308E0A83B66D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69E1B092-54CF-4447-9922-308E0A83B66D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69E1B092-54CF-4447-9922-308E0A83B66D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4AE58EC-9333-40EE-BE35-4795DC4B64DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4AE58EC-9333-40EE-BE35-4795DC4B64DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4AE58EC-9333-40EE-BE35-4795DC4B64DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4AE58EC-9333-40EE-BE35-4795DC4B64DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1829E632-892F-4786-B6D6-7B02DAB9120A}
+	EndGlobalSection
+EndGlobal
