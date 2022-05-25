@@ -1,3 +1,5 @@
+using WineCommerce.Domain.Login.Handlers;
+using WineCommerce.Domain.Login.Infrastructure;
 using WineCommerce.Domain.Products.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 
 builder.Services.AddScoped<ProductQueries>();
+builder.Services.AddScoped<LoginQueries>();
+builder.Services.AddScoped<LoginHandler>();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

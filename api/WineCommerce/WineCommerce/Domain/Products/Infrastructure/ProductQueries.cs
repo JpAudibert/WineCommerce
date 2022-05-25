@@ -16,19 +16,22 @@ public class ProductQueries : BaseConnection
     public ProductQueries(IConfiguration configuration) : base(configuration)
     { }
 
-    public async Task<IEnumerable<ProductViewModel>> GetProducts()
+    public async Task<IEnumerable<ProductViewModel>> GetProducts(int limit = 20, int page = 1)
     {
         using NpgsqlConnection connection = new(ConnectionString);
+
+        int skip = (page - 1) * limit;
 
         const string sql = @" SELECT name, 
 	                                 price, 
 	                                 description, 
 	                                 image
                                 FROM products
-                               ORDER BY id 
-                               LIMIT 30";
+                               ORDER BY id
+                               LIMIT @limit
+                              OFFSET @skip ";
 
-        return await connection.QueryAsync<ProductViewModel>(sql);
+        return await connection.QueryAsync<ProductViewModel>(sql, param: new { limit, skip });
     }
 
     public async Task<ProductViewModel> GetProduct(int id)
