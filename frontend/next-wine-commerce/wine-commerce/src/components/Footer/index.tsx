@@ -8,7 +8,7 @@ const Footer: React.FC = () => (
     </div>
     <div>
       <Link href="/">Página inicial</Link>
-      <Link href="/products">Produtos</Link>
+      <Link href="/catalog/products">Produtos</Link>
       <Link href="/login">Login</Link>
     </div>
   </Content>

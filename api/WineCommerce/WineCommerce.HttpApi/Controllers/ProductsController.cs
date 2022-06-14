@@ -15,9 +15,9 @@ public class ProductsController : Controller
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetProducts()
+    public async Task<IActionResult> GetProducts([FromQuery] int limit = 20, int page = 1)
     {
-        return Ok(await _productQueries.GetProducts());
+        return Ok(await _productQueries.GetProducts(limit: limit));
     }
 
     [HttpGet("{id}")]

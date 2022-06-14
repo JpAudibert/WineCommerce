@@ -7,7 +7,7 @@ const NavigationBar: React.FC = () => (
       <Link href="/">Wine Commerce</Link>
     </div>
     <div>
-      <Link href="/products">Produtos</Link>
+      <Link href="/catalog/products">Produtos</Link>
       <Link href="/login">Login</Link>
     </div>
   </Content>
