@@ -6,13 +6,14 @@ export const LoginContainer = styled.main`
   align-items: center;
   height: 100%;
   width: 100%;
-  padding: 13%;
 
-  border: solid 1px #1b1725;
-  border-radius: 15px;
-`;
+  `;
 
 export const FormItems = styled.form`
+  border: solid 1px #1b1725;
+  border-radius: 15px;
+  padding: 10%;
+
   div {
     margin-top: 8px;
   }

@@ -3,8 +3,18 @@ import Container from "@/components/Container";
 import Footer from "@/components/Footer";
 import NavigationBar from "@/components/NavigationBar";
 import { LoginContainer, FormItems } from "@/styles/login";
+import axios from "axios";
+import { useCallback } from "react";
 
 export default function Login() {
+  const handleLogin = useCallback(async () => {
+    const user = await axios.post('http://localhost:5144/login');
+
+    return {
+      props: { user },
+    }
+  }, [])
+
   return (
     <>
       <NavigationBar />
@@ -20,7 +30,7 @@ export default function Login() {
               <span>Senha</span>
               <input type="password" />
             </div>
-            <Button>Entrar</Button>
+            <Button onClick={handleLogin}>Entrar</Button>
           </FormItems>
         </LoginContainer>
       </Container>
