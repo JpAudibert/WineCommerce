@@ -4,7 +4,7 @@ import Container from "@/components/Container"
 import Footer from "@/components/Footer"
 import NavigationBar from "@/components/NavigationBar"
 import Product from "@/components/Product"
-import { BackgroundImage, DescriptionItem, Descriptions, Products } from "@/styles/home"
+import { BackgroundImage, Products } from "@/styles/home"
 import Image from "next/image"
 
 interface IProducts {
